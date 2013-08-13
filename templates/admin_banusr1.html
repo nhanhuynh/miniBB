@@ -1,0 +1,32 @@
+<table class="forumsmb">
+<tr>
+<td class="caption3"><a href="{$main_url}/{$startIndex}">{$sitename}</a> / {$l_ban}</td>
+</tr>
+</table>
+
+<form action="{$main_url}/{$indexphp}" method="post" class="formStyle">
+<table class="tbTransparentmb">
+
+<tr><td class="tbTransparentCell" style="width:30%">
+
+<span class="txtNr">{$l_enterIP}:</span>
+<br />
+<input type="text" maxlength="50" size="30" name="banip" value="{$banip}" class="textForm" />
+<br />
+
+<span class="txtNr">{$l_banReason}:</span>
+<br />
+<input type="text" maxlength="255" size="30" name="banreason" value="{$banreason}" class="textForm" />
+
+<input type="hidden" name="step" value="banUsr2" />
+<input type="hidden" name="action" value="banip" />
+<br /><br />
+<input type="submit" value="{$l_ban}" class="inputButton" />
+<span class="txtSm"><br /><br /><a href="{$main_url}/{$indexphp}action=banip&amp;step=deleteban1">{$l_unsetBan}</a></span>
+</td>
+
+<td class="tbTransparentCell" style="width:70%;vertical-align:top;padding-left:10px"><span class="warning">{$warning}&nbsp;</span></td>
+
+</tr>
+</table>
+</form>

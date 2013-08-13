@@ -1,0 +1,28 @@
+SUBJECT>>{$sitename}: New Post<<
+Hello,
+
+You're receiving this letter, because you were subscribed
+to the topic "{$topicTitle_em}" in our forum "{$forum_title_em}",
+and {$user_usr_em} has posted it or replied in it.
+
+Message begins with:
+--
+
+{$postTextSmall}
+
+--
+
+Click the link below, or copy/paste it as your browser's URL address,
+to read the whole topic and/or replies:
+
+[FOLLOW_CODE]
+
+If you don't want to receive more notifications about this topic,
+to unsubscribe from this topic directly, use the link below:
+
+[UNSUBSCRIBE_BY_CODE]
+
+Best Regards,
+Forum Administrator
+
+This email has been sent automatically. Please, do not reply!

@@ -1,0 +1,80 @@
+<script type="text/javascript">
+<!--
+var l_accessDenied="{$l_forbidden}";
+var l_quoteMsgAlert="{$l_quoteMsgAlert}";
+var tlength={$post_text_minlength};
+var anonPost={$anonPost};
+//-->
+</script>
+<script type="text/javascript" src="{$main_url}/templates/form.js"></script>
+
+<!--MAINTOPICSPAGE-->
+<table class="forums">
+<tr>
+<td class="caption3"><a href="{$main_url}/{$startIndex}">{$sitename}</a> /</td><td class="caption3 txtR noWrap">{$startNewTopicLink}</td>
+</tr>
+<tr>
+<td><h1 class="headingTitle"><img src="{$main_url}/img/forum_icons/{$forumIcon}" alt="{$forumName}" title="{$forumName}" style="vertical-align:middle" />&nbsp;{$forumName}</h1></td><td class="txtR noWrap" style="width:40%"><!--pageNav--><span class="txtSm"><b>{$pageNav}&nbsp;</b></span><!--/pageNav-->&nbsp;</td>
+</tr>
+</table>
+
+{$specialThreads}
+{$list_topics}
+
+<br />
+<!--pageNav-->
+<table class="tbTransparent">
+<tr>
+<td><h1 class="headingTitle"><img src="{$main_url}/img/forum_icons/{$forumIcon}" alt="{$forumName}" title="{$forumName}" style="vertical-align:middle" />&nbsp;{$forumName}</h1></td>
+<td class="txtR"><span class="txtSm"><b>{$pageNav}&nbsp;</b></span></td></tr>
+</table>
+<!--/pageNav-->
+<!--/MAINTOPICSPAGE-->
+
+<!--MAINTOPICFORM-->
+<form id="postMsg" action="{$main_url}/{$indexphp}" method="post" class="formStyle">
+
+<table class="tbTransparentmb">
+<tr>
+<td class="caption3">{$l_topicTitle}<a id="newtopic">&nbsp;</a></td>
+</tr>
+<tr>
+<td class="tbTransparent txtL subjectPad">
+<input type="text" name="topicTitle" size="38" maxlength="{$topic_max_length}" class="textForm topicTitle" tabindex="1" value="{$topicpTitle}" />
+</td>
+</tr>
+
+{$mainPostForm}
+
+<tr>
+<td>
+<script type="text/javascript">
+<!--
+document.write('<input type="button" name="subbut" value="{$l_sub_post_tpc}" class="inputButton" tabindex="5" onClick="submitForm();" />');
+//-->
+</script>
+
+<noscript><input type="submit" value="{$l_sub_post_tpc}" class="inputButton" tabindex="5" /></noscript>
+
+<!--MAINTOPICFORUMINPUT-->
+<input type="hidden" name="forum" value="{$forum}" />
+<!--/MAINTOPICFORUMINPUT-->
+<input type="hidden" name="action" value="ptopic" />
+</td>
+</tr>
+</table>
+
+</form>
+<!--/MAINTOPICFORM-->
+
+<!--MAINTOPICSPAGE-->
+
+{$forumsList}
+
+<script type="text/javascript">
+<!--
+if(document.forms['postMsg']) document.forms['postMsg'].elements['subbut'].disabled=false;
+//-->
+</script>
+
+<!--/MAINTOPICSPAGE-->

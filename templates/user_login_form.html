@@ -1,0 +1,22 @@
+<script type="text/javascript">
+<!--
+function handleEnter(e) {
+var keynum;
+// IE
+if(window.event) keynum=e.keyCode;
+// Netscape/Firefox/Opera
+else if(e.which) keynum = e.which;
+if(keynum==13){
+if(document.forms['login']) document.forms['login'].submit();
+else if(document.forms['postMsg']) submitForm();
+}
+return keynum;
+}
+//-->
+</script>
+
+<input type="text" size="18" maxlength="{$uname_maxlength}" name="user_usr" value="{$user_usr}" class="textForm" style="vertical-align:middle" tabindex="3" placeholder="{$l_sub_name}" />
+<input type="password" size="18" maxlength="32" name="user_pwd" class="textForm" style="vertical-align:middle" tabindex="4" onkeydown="JavaScript:handleEnter(event);" placeholder="{$l_sub_pass}" />&nbsp;<sup class="capMenu"><a href="{$main_url}/{$indexphp}action=sendpass" rel="nofollow">?</a></sup>
+<input type="hidden" name="mode" value="login" />
+<input type="hidden" name="queryStr" value="{$queryStrDisp}" />
+{$l_anonTxt}

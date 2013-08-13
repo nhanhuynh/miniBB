@@ -1,0 +1,16 @@
+<form action="{$main_url}/{$bb_admin}" method="post" class="formStyle" id="sendmails">
+<table class="tbTransparentmb">
+<tr>
+<td class="tbTransparentCell">
+<span class="warning">{$warning}&nbsp;<br /></span>
+<input type="text" maxlength="50" size="30" name="delemail" value="{$delemail}" class="textForm" />
+<input type="hidden" name="action" value="delsendmails2" />
+<input type="hidden" name="allsubs" value="0" />
+<br /><br />
+<span class="txtNr">{$l_delSendMais}</span><br /><br />
+<input type="submit" value="{$l_delete}" class="inputButton" />
+<input type="button" value="{$l_deleteAll}" class="inputButton" onclick="JavaScript:document.forms['sendmails'].elements['allsubs'].value=1;document.forms['sendmails'].submit();" />
+</td>
+</tr>
+</table>
+</form>
